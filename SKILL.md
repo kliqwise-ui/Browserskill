@@ -141,6 +141,23 @@ Keep an internal task state:
 
 Do not narrate every click unless asked.
 
+## Call-budget discipline
+
+Minimize agent turns.
+
+Prefer:
+1. one snapshot;
+2. one deliberate action;
+3. one verification;
+4. continue only if necessary.
+
+Do not:
+- repeatedly snapshot unchanged pages;
+- re-read the same content;
+- retry failed actions without changing strategy;
+- keep browsing after the requested result is already available.
+
+When the requested end state is reached, stop immediately and return the result.
 ## Completion
 
 Before saying a browser task is complete, verify the requested end result directly.
